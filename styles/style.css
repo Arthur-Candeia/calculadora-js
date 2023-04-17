@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor1: #012030;
+  --cor2: #13678A;
+  --cor3: #45C4B0;
+  --cor4: #9AEBA3;
+  --cor5: #DAFDBA;
+  --error: #ff0043;
+}
+
+body {
+  background-color: var(--cor1);
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 0 24px 38px;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+
+button {
+  background-color: var(--cor2);
+  color: var(--cor4);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all .1s ease-in;
+}
+
+button:hover {
+  background-color: #13668a88;
+  transition: all 0.1s ease-in;
+}
+
+header > h1 {
+  font: bold 2em 'Open Sans';
+  color: var(--cor5);
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  font: bold 1.8em 'Open Sans';
+  margin: 0 auto;
+  text-align: end;
+  background-color: transparent;
+  border: 1px solid var(--cor5);
+  color: var(--cor3);
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(30px, 50px);
+  gap: 16px;
+  margin: 32px 0px;
+}
+
+.charKey, #clear, #equal {
+  font: bold 1em 'Source Code Pro', monospace;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  background-color: var(--cor2);
+  color: var(--cor4);
+  width: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+section > button {
+  background-color: transparent;
+  border: 1px solid var(--cor5);
+  border-radius: 8px 0px 0px 8px;
+}
+
+section > input {
+  border-radius: 0px 8px 8px 0px;
+}
+
+#copy {
+  width: 20%;
+}
+
+.sucess {
+  border-color: #4dff91;
+  color: #4dff91;
+  transition: all 0.2s ease-in;
+}
+
+.error {
+  border-color: var(--error);
+  color: var(--error);
+}
